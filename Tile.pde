@@ -33,22 +33,22 @@ int[][] ADJACENCY_TEST = new int[][]{{ 0, 1},{0, 6},{ 2,0},{3,11},{5,5},{5,10}};
 // the reverse adjacency list e.g. the list of coordinates for the (-1,-1) adjacency need to be in the same
 // order as the list of coordinates for (1,1) adjacency
 int[][][] ADJACENCY_MATCH_TEST = new int[][][]{
-  {{0,0},{0,1},{0,2},{0,3}, // corresponds to (-1,-1) adjacency
-   {1,0},{1,1},{1,2},{1,3}},
-  {{0,3},{0,4},{0,5},{0,6}, // corresponds to (0,-1) adjacency
-               {1,5},{1,6},{1,7},{1,8}},
+  {            {0,2},{0,3}, // corresponds to (-1,-1) adjacency
+   {1,0},{1,1}           },
+  {{0,3},{0,4},             // corresponds to (0,-1) adjacency
+                           {1,7},{1,8}},
   {{1,0},                   // corresponds to (-1,0) adjacency
-   {2,0},{2,1},{2,2},
-         {3,1},{3,2},{3,3},
+         {2,1},
+               {3,2},
                      {4,3}},
   {{1,8},                   // corresponds to (1,0) adjacency
-   {2,8},{2,9},{2,10},
-         {3,9},{3,10},{3,11},
+         {2,9},
+               {3,10},
                       {4,11}},
-  {{4,3},{4,4},{4,5},{4,6}, // corresponds to (0,1) adjacency
-               {5,5},{5,6},{5,7},{5,8}},
-  {{4,8},{4,9},{4,10},{4,11}, // corresponds to (1,1) adjacency
-   {5,8},{5,9},{5,10},{5,11}}
+  {{4,3},{4,4},             // corresponds to (0,1) adjacency
+                           {5,7},{5,8}},
+  {            {4,10},{4,11}, // corresponds to (1,1) adjacency
+   {5,8},{5,9}             }
 };
 
 // matrix of coordinates to pull from during a rotation
