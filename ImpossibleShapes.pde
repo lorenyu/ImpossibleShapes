@@ -90,6 +90,7 @@ void stepPattern() {
     pattern = patterns[patternIndex];
   }
   pattern.finish();
+  pattern.draw();
   patternIndex++;
   if (patternIndex >= patterns.length) {
     patternIndex = 0;
@@ -101,8 +102,5 @@ void mousePressed() {
 }
 
 void draw() {
-  if (pattern != null) {
-    pattern.draw();
-  }
 }
 
