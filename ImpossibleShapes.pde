@@ -1,12 +1,16 @@
 color[] colors = {#E0E4CC, #F38630, #69D2E7, #A7DBD8};
 
 Pattern pattern;
+int patternIndex = 0;
+int RANDOM_PATTERN = 0;
+int PRESET_PATTERN = 1;
+int patternMode = RANDOM_PATTERN; 
 
 void setup() {
   size(1600, 800);
 
-  pattern = new Pattern();
   initTile();
+  initPattern();
   testColorMatching();
   testTileAdjacencies();
   
@@ -63,13 +67,42 @@ void drawTiles(Tile[] tiles) {
   popMatrix();
 }
 
-void mousePressed() {
+void keyPressed() {
+  println(key);
+  if (key == 'r') {
+    patternMode = RANDOM_PATTERN;
+    println("Set pattern mode = RANDOM");
+  } else if (key == 'p') {
+    patternMode = PRESET_PATTERN;
+    println("Set patter mode = PRESET");
+  }
+  patternIndex = 0;
+  stepPattern();
+}
+
+void stepPattern() {
   fill(colors[0]);
   rect(0,0,width,height);
-  while (pattern.step());
-  pattern.draw();
+  
+  if (patternMode == RANDOM_PATTERN) {
+    pattern = new RandomPattern();
+  } else if (patternMode == PRESET_PATTERN) {
+    pattern = patterns[patternIndex];
+  }
+  pattern.finish();
+  patternIndex++;
+  if (patternIndex >= patterns.length) {
+    patternIndex = 0;
+  }
+}
+
+void mousePressed() {
+  stepPattern();
 }
 
 void draw() {
+  if (pattern != null) {
+    pattern.draw();
+  }
 }
 

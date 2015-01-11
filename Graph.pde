@@ -15,7 +15,6 @@ class Graph {
         row[j] = new Node(i, j);
       }
     }
-    this.openNodes.add(grid[numRows/2][numCols/2]);
   }
   
   void draw() {
@@ -93,6 +92,12 @@ class Graph {
     return grid[row][col];
   }
   
+  void openNode(Node node) {
+    assert node != null;
+    println("Adding open node " + node.row + "," + node.col);
+    openNodes.add(node);
+  }
+
   void closeNode(Node node) {
     println("Removing node " + node.row + "," + node.col);
     openNodes.remove(node);
@@ -116,10 +121,11 @@ class Graph {
     for (int[] adjacency : tile.adjacencies) {
       int r = row + adjacency[1];
       int c = col + adjacency[0];
-      if (r >= 0 && r < numRows && c >= 0 && c < numCols && grid[r][c].tile == null) {
-        openNodes.add(grid[r][c]);
+      Node adjacentNode = getNode(r, c);
+      if (adjacentNode != null && adjacentNode.tile == null && !openNodes.contains(adjacentNode)) {
+        openNodes.add(adjacentNode);
         println("Adding " + r + "," + c + " to open nodes");
-      } 
+      }
     }
     return true;
   }

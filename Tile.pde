@@ -19,7 +19,7 @@ Tile T2a, T2a1, T2a2, T2a3, T2a4, T2a5,
   T6a, T6a1;
 
 PVector[][] TILE_POINTS;
-float TRIANGLE_LENGTH = 10.0;
+float TRIANGLE_LENGTH = 30.0;
 float TILE_SIDE_LENGTH = TRIANGLE_LENGTH * 3;
 float TILE_SPACING = TILE_SIDE_LENGTH + TRIANGLE_LENGTH; 
 
@@ -430,6 +430,7 @@ void initTile() {
     T5b, T5b1, T5b2, T5b3, T5b4, T5b5,
     T6a, T6a1
   };
+
 }
 
 void initTilePoints() {
