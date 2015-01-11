@@ -4,7 +4,7 @@ Pattern pattern;
 int patternIndex = 0;
 int RANDOM_PATTERN = 0;
 int PRESET_PATTERN = 1;
-int patternMode = RANDOM_PATTERN; 
+int patternMode = PRESET_PATTERN; 
 
 void setup() {
   size(1600, 800);
