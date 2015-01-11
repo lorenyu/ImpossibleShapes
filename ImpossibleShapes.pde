@@ -75,6 +75,8 @@ void keyPressed() {
   } else if (key == 'p') {
     patternMode = PRESET_PATTERN;
     println("Set patter mode = PRESET");
+  } else {
+    return;
   }
   patternIndex = 0;
   stepPattern();
