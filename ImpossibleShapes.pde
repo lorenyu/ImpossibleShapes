@@ -27,7 +27,9 @@ void drawTiles() {
   int row = 0;
   for (Tile tile : tiles) {
     translate(TILE_SIDE_LENGTH * 2, 0);
-    tile.draw();
+    if (tile != null) {
+      tile.draw();
+    }
     fill(0);
     rect(-1,-1,2,2);
     col++;
@@ -61,14 +63,13 @@ void drawTiles(Tile[] tiles) {
   popMatrix();
 }
 
-void draw() {
-//void mousePressed() {
+void mousePressed() {
   fill(colors[0]);
   rect(0,0,width,height);
-  if (!pattern.step()) {
-    println("Done.");
-  }
+  while (pattern.step());
   pattern.draw();
 }
 
+void draw() {
+}
 
