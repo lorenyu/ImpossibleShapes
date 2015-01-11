@@ -1,7 +1,7 @@
 Pattern P1x1A, P1x1B,
   P2x2A, P2x2B,
   P3x3A, P3x3B,
-  P7x7A, P7x7B, P7x7C, P7x7D,
+  P7x7A, P7x7B, P7x7C, P7x7D, P7x7E, P7x7F,
   P13x13A, P13x13B;
   
 Pattern[] patterns;
@@ -77,7 +77,7 @@ void initPresetPattern() {
     {T3a3, T3a,T3a1,T3a5,null,T3a2,T3a4},
     {null,T3a2,T3a4,T3a3, T3a,T3a1,T3a5}
   });
-  
+
   P7x7B = new PresetPattern(new Tile[][]{
     {T3a2, T3a,T3a1,T3a4,T3a3,T3a5,null},
     {T3a1,T3a4,T3a3,T3a5,null,T3a2, T3a},
@@ -89,6 +89,16 @@ void initPresetPattern() {
   });
   
   P7x7C = new PresetPattern(new Tile[][]{
+    {T3e5,T3e3,T3e4,T3e1,T3e,T3e2,null},
+    {T3e4,T3e1,T3e,T3e2,null,T3e5,T3e3},
+    {T3e,T3e2,null,T3e5,T3e3,T3e4,T3e1},
+    {null,T3e5,T3e3,T3e4,T3e1,T3e,T3e2},
+    {T3e3,T3e4,T3e1,T3e,T3e2,null,T3e5},
+    {T3e1,T3e,T3e2,null,T3e5,T3e3,T3e4},
+    {T3e2,null,T3e5,T3e3,T3e4,T3e1,T3e}
+  });
+
+  P7x7E = new PresetPattern(new Tile[][]{
     {T3b4,T3b,T3b5,T3b2,T3b3,T3b1,null},
     {T3b3,T3b1,null,T3b4,T3b,T3b5,T3b2},
     {T3b,T3b5,T3b2,T3b3,T3b1,null,T3b4},
@@ -98,7 +108,7 @@ void initPresetPattern() {
     {T3b2,T3b3,T3b1,null,T3b4,T3b,T3b5}
   });
   
-  P7x7D = new PresetPattern(new Tile[][]{
+  P7x7F = new PresetPattern(new Tile[][]{
     {T3br1,T3br,T3br2,null,T3br5,T3br3,T3br4},
     {T3br2,null,T3br5,T3br3,T3br4,T3br1,T3br},
     {T3br5,T3br3,T3br4,T3br1,T3br,T3br2,null},
