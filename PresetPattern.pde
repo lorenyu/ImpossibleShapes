@@ -109,4 +109,20 @@ void initPresetPattern() {
     {null,null,T3b1,null,null,null,T3b4,null,null,T3b,T3b2,T3b5,T3b3},
     {null,null,null,T3b4,null,null,T3b,T3b2,T3b5,T3b3,null,null,T3b1},
   });
+  
+  P13x13B = new PresetPattern(new Tile[][]{
+    {T3br1,T3br4,T3br,null,null,T3br2,null,null,null,T3br5,null,null,T3br3},
+    {T3br5,null,null,T3br3,T3br1,T3br4,T3br,null,null,T3br2,null,null,null},
+    {T3br2,null,null,null,T3br5,null,null,T3br3,T3br1,T3br4,T3br,null,null},
+    {T3br4,T3br,null,null,T3br2,null,null,null,T3br5,null,null,T3br3,T3br1},
+    {null,null,T3br3,T3br1,T3br4,T3br,null,null,T3br2,null,null,null,T3br5},
+    {null,null,null,T3br5,null,null,T3br3,T3br1,T3br4,T3br,null,null,T3br2},
+    {T3br,null,null,T3br2,null,null,null,T3br5,null,null,T3br3,T3br1,T3br4},
+    {null,T3br3,T3br1,T3br4,T3br,null,null,T3br2,null,null,null,T3br5,null},
+    {null,null,T3br5,null,null,T3br3,T3br1,T3br4,T3br,null,null,T3br2,null},
+    {null,null,T3br2,null,null,null,T3br5,null,null,T3br3,T3br1,T3br4,T3br},
+    {T3br3,T3br1,T3br4,T3br,null,null,T3br2,null,null,null,T3br5,null,null},
+    {null,T3br5,null,null,T3br3,T3br1,T3br4,T3br,null,null,T3br2,null,null},
+    {null,T3br2,null,null,null,T3br5,null,null,T3br3,T3br1,T3br4,T3br,null}
+  });
 }
