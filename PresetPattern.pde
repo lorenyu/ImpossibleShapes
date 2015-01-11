@@ -1,6 +1,6 @@
 Pattern P1x1A, P1x1B,
   P2x2A, P2x2B,
-  P3x3A,
+  P3x3A, P3x3B,
   P7x7A, P7x7B, P7x7C, P7x7D,
   P13x13A, P13x13B;
   
@@ -60,6 +60,12 @@ void initPresetPattern() {
     {T3c1,T3c,null},
     {T3c,null,T3c1},
     {null,T3c1,T3c}
+  });
+  
+  P3x3B = new PresetPattern(new Tile[][]{
+    {T3d1,T3d,null},
+    {T3d,null,T3d1},
+    {null,T3d1,T3d}
   });
 
   P7x7A = new PresetPattern(new Tile[][]{
