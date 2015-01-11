@@ -2,6 +2,7 @@ Pattern P1x1A, P1x1B,
   P2x2A, P2x2B,
   P3x3A, P3x3B, P3x3C, P3x3D,
   P7x7A, P7x7B, P7x7C, P7x7D, P7x7E, P7x7F,
+  P7x7G, P7x7H, P7x7I, P7x7J,
   P13x13A, P13x13B;
   
 Pattern[] patterns;
@@ -143,6 +144,46 @@ void initPresetPattern() {
     {T3br,T3br2,null,T3br5,T3br3,T3br4,T3br1},
     {null,T3br5,T3br3,T3br4,T3br1,T3br,T3br2},
     {T3br3,T3br4,T3br1,T3br,T3br2,null,T3br5},
+  });
+
+  P7x7G = new PresetPattern(new Tile[][]{
+    {T5b1,T5a,T5a2,null,T5b5,T5b3,T5a4},
+    {T5a2,null,T5b5,T5b3,T5a4,T5b1,T5a},
+    {T5b5,T5b3,T5a4,T5b1,T5a,T5a2,null},
+    {T5a4,T5b1,T5a,T5a2,null,T5b5,T5b3},
+    {T5a,T5a2,null,T5b5,T5b3,T5a4,T5b1},
+    {null,T5b5,T5b3,T5a4,T5b1,T5a,T5a2},
+    {T5b3,T5a4,T5b1,T5a,T5a2,null,T5b5}
+  });
+
+  P7x7H = new PresetPattern(new Tile[][]{
+    {T5b1,T5a,T5b3,T5a4,T5a2,null,T5b5},
+    {T5a2,null,T5b5,T5b1,T5a,T5b3,T5a4},
+    {T5a,T5b3,T5a4,T5a2,null,T5b5,T5b1},
+    {null,T5b5,T5b1,T5a,T5b3,T5a4,T5a2},
+    {T5b3,T5a4,T5a2,null,T5b5,T5b1,T5a},
+    {T5b5,T5b1,T5a,T5b3,T5a4,T5a2,null},
+    {T5a4,T5a2,null,T5b5,T5b1,T5a,T5b3}
+  });
+
+  P7x7I = new PresetPattern(new Tile[][]{
+    {T5a1,T5b,T5b2,null,T5a5,T5a3,T5b4},
+    {T5b2,null,T5a5,T5a3,T5b4,T5a1,T5b},
+    {T5a5,T5a3,T5b4,T5a1,T5b,T5b2,null},
+    {T5b4,T5a1,T5b,T5b2,null,T5a5,T5a3},
+    {T5b,T5b2,null,T5a5,T5a3,T5b4,T5a1},
+    {null,T5a5,T5a3,T5b4,T5a1,T5b,T5b2},
+    {T5a3,T5b4,T5a1,T5b,T5b2,null,T5a5}
+  });
+
+  P7x7J = new PresetPattern(new Tile[][]{
+    {T5a1,T5b,T5a3,T5b4,T5b2,null,T5a5},
+    {T5b2,null,T5a5,T5a1,T5b,T5a3,T5b4},
+    {T5b,T5a3,T5b4,T5b2,null,T5a5,T5a1},
+    {null,T5a5,T5a1,T5b,T5a3,T5b4,T5b2},
+    {T5a3,T5b4,T5b2,null,T5a5,T5a1,T5b},
+    {T5a5,T5a1,T5b,T5a3,T5b4,T5b2,null},
+    {T5b4,T5b2,null,T5a5,T5a1,T5b,T5a3}
   });
 
   P13x13A = new PresetPattern(new Tile[][]{
