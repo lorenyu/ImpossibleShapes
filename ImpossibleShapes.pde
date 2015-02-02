@@ -1,5 +1,7 @@
-//color[] colors = {#E0E4CC, #F38630, #69D2E7, #A7DBD8};
-color[] colors = {#444450, #FF766C, #6ECCD2, #49A2CE};
+//color[] colors = {#E0E4CC, #F38630, #69D2E7, #A7DBD8}; // a-light
+color[] colors = {#444450, #FF766C, #6ECCD2, #49A2CE}; // b-dark
+//color[] colors = {#FCEBB6, #F07818, #78C0A8, #F0A830}; // c-light
+//color[] colors = {#5E412F, #F07818, #78C0A8, #F0A830}; // d-dark
 
 Pattern pattern;
 int patternIndex = 0;
