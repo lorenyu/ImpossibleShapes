@@ -1,17 +1,5 @@
-class Pattern {
-  Graph graph = new Graph();
-  
-  void finish() {
-    while (step());
-  }
-  
-  boolean step() {
-    return false;
-  }
-
-  void draw() {
-    graph.draw();
-  }
+interface Pattern {
+  void draw();
 }
 
 void initPattern() {

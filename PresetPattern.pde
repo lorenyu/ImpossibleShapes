@@ -10,12 +10,14 @@ Pattern P1x1A, P1x1B,
 Pattern[] patterns;
 
 
-class PresetPattern extends Pattern {
+class PresetPattern implements Pattern {
+  Graph graph = new Graph();
   Tile[][] tilePattern;
 
   PresetPattern(Tile[][] tilePattern) {
     this.tilePattern = tilePattern;
     graph.openNode(graph.getNode(0, 0));
+    while (step());
   }
 
   boolean step() {
@@ -37,6 +39,10 @@ class PresetPattern extends Pattern {
 
     graph.placeTile(tile, node.row, node.col);
     return true;
+  }
+
+  void draw() {
+    graph.draw();
   }
 }
 

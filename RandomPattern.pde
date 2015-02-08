@@ -1,7 +1,9 @@
-class RandomPattern extends Pattern {
+class RandomPattern implements Pattern {
+  Graph graph = new Graph();
   
   RandomPattern() {
     graph.openNode(graph.getNode(graph.numRows/2, graph.numCols/2));
+    while (step());
   }
 
   boolean step() {
@@ -24,5 +26,9 @@ class RandomPattern extends Pattern {
 
     graph.placeTile(tile, node.row, node.col);
     return true;
+  }
+
+  void draw() {
+    graph.draw();
   }
 }

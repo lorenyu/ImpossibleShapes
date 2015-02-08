@@ -94,7 +94,7 @@ void stepPattern() {
   } else if (patternMode == PRESET_PATTERN) {
     pattern = patterns[patternIndex];
   }
-  pattern.finish();
+
   pattern.draw();
   patternIndex++;
   if (patternIndex >= patterns.length) {
