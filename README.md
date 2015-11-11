@@ -7,6 +7,10 @@ Instructions
 - Press `r` to switch to random mode
 - Press `p` to switch to preset mode
 
+Unit tests
+----------
+- Press `t` to run unit tests
+
 Examples
 --------
 ![](./images/Screen Shot 2015-02-01 at 7.34.01 PM.png)
