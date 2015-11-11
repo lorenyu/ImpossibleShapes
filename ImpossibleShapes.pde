@@ -10,7 +10,7 @@ int PRESET_PATTERN = 1;
 int patternMode = PRESET_PATTERN; 
 
 void setup() {
-  size(1600, 800);
+  size(1600, 800, P2D);
 
   initTile();
   initPattern();
@@ -108,4 +108,3 @@ void mousePressed() {
 
 void draw() {
 }
-
