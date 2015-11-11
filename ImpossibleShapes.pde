@@ -14,8 +14,6 @@ void setup() {
 
   initTile();
   initPattern();
-  testColorMatching();
-  testTileAdjacencies();
   
   fill(colors[0]);
   rect(0,0,width,height);
@@ -78,6 +76,8 @@ void keyPressed() {
   } else if (key == 'p') {
     patternMode = PRESET_PATTERN;
     println("Set patter mode = PRESET");
+  } else if (key == 't') {
+    runTests();
   } else {
     return;
   }

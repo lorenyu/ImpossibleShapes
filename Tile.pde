@@ -446,32 +446,3 @@ void initTilePoints() {
     }
   }
 }
-
-void testTileAdjacencies() {
-  assert T2a1.adjacencies.size() == 2;
-  assert arrayEquals(T2a1.adjacencies.get(0), new int[]{1,0});
-  assert arrayEquals(T2a1.adjacencies.get(1), new int[]{1,1});
-  assert T3br2.adjacencies.size() == 3;
-  assert arrayEquals(T3br2.adjacencies.get(0), new int[]{0,-1});
-  assert arrayEquals(T3br2.adjacencies.get(1), new int[]{0,1});
-  assert arrayEquals(T3br2.adjacencies.get(2), new int[]{1,1});
-  assert T4c3.adjacencies.size() == 4;
-  assert arrayEquals(T4c3.adjacencies.get(0), new int[]{0,-1});
-  assert arrayEquals(T4c3.adjacencies.get(1), new int[]{-1,0});
-  assert arrayEquals(T4c3.adjacencies.get(2), new int[]{0,1});
-  assert arrayEquals(T4c3.adjacencies.get(3), new int[]{1,1});
-}
-
-void testColorMatching() {
-  assert arrayEquals(T2d.getColorMap(T2d, new int[]{0,-1}), new int[]{0,1,2,-1});
-  assert arrayEquals(T2d.getColorMap(T2d, new int[]{0,1}), new int[]{0,1,2,-1});
-  assert arrayEquals(T2d.getColorMap(T2d, new int[]{-1,0}), new int[]{0,-1,-1,-1});
-  assert arrayEquals(T2d.getColorMap(T4ar, new int[]{0,-1}), new int[]{0,2,3,-1});
-  assert arrayEquals(T3e.getColorMap(T2a, new int[]{-1,-1}), new int[]{0,-1,2,3});
-  assert arrayEquals(T5b1.getColorMap(T2c, new int[]{-1,0}), new int[]{0,-1,1,3});
-  assert arrayEquals(T4b2.getColorMap(T4b3, new int[]{0,-1}), new int[]{0,-1,2,1});
-  for (int[] adjacency : ADJACENCIES) {
-    assert T6a.getColorMap(T6a, adjacency) != null;
-  }
-}
-
